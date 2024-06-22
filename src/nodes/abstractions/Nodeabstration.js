@@ -15,6 +15,7 @@ const Nodeabstration = ({ id, data, nodeType, children }) => {
 
   const handleTypeChange = (e) => setType(e.target.value);
 
+  // Varible detect text logic
   const detectVariables = (text) => {
     const regex = /{{\s*([a-zA-Z_$][a-zA-Z_$0-9]*)\s*}}/g;
     let match;
@@ -25,17 +26,17 @@ const Nodeabstration = ({ id, data, nodeType, children }) => {
     setVariables(vars);
   };
 
+  // Card Sizeing logic 
   useEffect(() => {
     const input = inputRef.current;
     const card = cardRef.current;
     if (input && card) {
-      
-      input.style.height = 'auto'; 
+
+      input.style.height = 'auto';
       input.style.width = `${input.scrollWidth}px`;
       input.style.height = `${input.scrollHeight}px`;
 
-      
-      card.style.height = `${input.scrollHeight + 90}px`; 
+      card.style.height = `${input.scrollHeight + 90}px`;
     }
   }, [name]);
 
@@ -52,7 +53,7 @@ const Nodeabstration = ({ id, data, nodeType, children }) => {
             value={name}
             onChange={handleNameChange}
             className="w-full resize-none overflow-hidden"
-            style={{ resize: 'none', overflow: 'hidden', width: '100%'}}
+            style={{ resize: 'none', overflow: 'hidden', width: '100%' }}
           />
         </label>
         <label>
