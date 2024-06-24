@@ -2,6 +2,8 @@
 
 Live Link :-  https://ai-auto.vercel.app/
 
+# Connect your ideas and thoughts.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
